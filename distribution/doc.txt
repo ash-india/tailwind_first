@@ -1,0 +1,43 @@
+npx tailwindcss init - A new file tailwind.config.js will get created
+
+inside src directory create input.css file and write  tailwind directives
+
+@tailwind base; 
+@tailwind components;
+@tailwind utilities;
+
+Now for different style a class name is available
+with the tags put the classname just like inline css
+
+Now in the terminal run
+npx tailwindcss -i ./src/input.css -o ./distribution/style.css --watch
+
+This command converts all the class name to their equivalent css blocks 
+and got defined in style.css stored in distribution directory
+
+Also declare the html file path in content int tailwind.config.js
+
+for dark theme, dark:bg-red-500 dark:text-white
+for hover effect, hover: bg-red-200
+
+Tailwind css is a mobile first approach
+for media query there are different sixes available md, sm, 
+So the effects or css written are first applied on the smallest widths
+
+So for the smallest screen the effects declared without any media-query statements got into the effect
+It goes on till a breakpoint arrives, let the breakpoint be sm(min-width: 640px), then or the screen size, 
+sm and larger the effect defined under sm will get into effect, and then if any breakpoint arrives, 
+then the required effect will get into action.
+
+If we want to give exact values then we can use variable 
+for example if we want to give padding of 2px then p-[2px],
+for padding of 14 px in x-axis px-[14px]
+
+
+
+
+HTML entities
+
+&lt <
+&gt >
+&nbsp 'space'
